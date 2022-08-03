@@ -5,6 +5,8 @@ import Models.Package;
 
 import java.io.*;
 import java.math.RoundingMode;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
@@ -16,7 +18,9 @@ public class Repository<T extends Package> implements IRepository<T> {
 
     public Repository() {
         packs = new ArrayList<>();
-        readFile();
+        if( Files.exists(Path.of(fileName)) ){
+            readFile();
+        }
     }
 
 

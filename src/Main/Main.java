@@ -54,7 +54,7 @@ public class Main {
 //            Package new_p=new Package(elem,entryDate,expDate,quantity);
 //            service.add(new_p);
 //        }
-        System.out.println(service.getAll());
+       // System.out.println(service.getAll());
 
 
     }
