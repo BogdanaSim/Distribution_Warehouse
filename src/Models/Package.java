@@ -63,8 +63,8 @@ public class Package implements Serializable {
 
     public long getWeeksBetweenDates() {
         Date date = new Date();
-        //LocalDate startDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-       LocalDate startDate=LocalDate.of(2023,3,1);
+        LocalDate startDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+      // LocalDate startDate=LocalDate.of(2023,3,1);
         LocalDate endDate = expDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
         return ChronoUnit.WEEKS.between(startDate, endDate);
